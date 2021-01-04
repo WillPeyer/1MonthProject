@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EADED5025A37D9F0053BDB6 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 6EADED4F25A37D9F0053BDB6 /* Sounds */; };
+		6EADED5A25A37E720053BDB6 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADED5925A37E720053BDB6 /* GameOverScene.swift */; };
 		90A34B74259257530083767D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A34B73259257530083767D /* AppDelegate.swift */; };
 		90A34B76259257530083767D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 90A34B75259257530083767D /* GameScene.sks */; };
 		90A34B78259257530083767D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 90A34B77259257530083767D /* Actions.sks */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EADED4F25A37D9F0053BDB6 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		6EADED5925A37E720053BDB6 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		90A34B70259257530083767D /* 1MonthProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1MonthProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A34B73259257530083767D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90A34B75259257530083767D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 		90A34B72259257530083767D /* 1MonthProject */ = {
 			isa = PBXGroup;
 			children = (
+				6EADED4F25A37D9F0053BDB6 /* Sounds */,
 				90A34B73259257530083767D /* AppDelegate.swift */,
+				6EADED5925A37E720053BDB6 /* GameOverScene.swift */,
 				90A34B75259257530083767D /* GameScene.sks */,
 				90A34B77259257530083767D /* Actions.sks */,
 				90A34B79259257530083767D /* GameScene.swift */,
@@ -127,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EADED5025A37D9F0053BDB6 /* Sounds in Resources */,
 				90A34B7F259257530083767D /* Main.storyboard in Resources */,
 				90A34B76259257530083767D /* GameScene.sks in Resources */,
 				90A34B81259257570083767D /* Assets.xcassets in Resources */,
@@ -143,6 +150,7 @@
 			files = (
 				90A34B7A259257530083767D /* GameScene.swift in Sources */,
 				90A34B7C259257530083767D /* GameViewController.swift in Sources */,
+				6EADED5A25A37E720053BDB6 /* GameOverScene.swift in Sources */,
 				90A34B74259257530083767D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
