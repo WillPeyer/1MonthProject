@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/90307984/Documents/1MonthProject/1MonthProject/GameOverScene.swift">
-   </FileRef>
-   <FileRef
-      location = "group:NinjaAttack">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
