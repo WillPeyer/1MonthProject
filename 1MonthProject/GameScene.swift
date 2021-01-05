@@ -48,7 +48,9 @@ class GameScene: SKScene {
     
   override func didMove(to view: SKView) {
     // 2
-    kCIInputBackgroundImageKey = SKColor.white
+    let background = SKSpriteNode(imageNamed: "background")
+    background.position = CGPoint(x: size.width/2, y: size.height/2)
+    addChild(background)
     // 3
     player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
     // 4
@@ -151,6 +153,7 @@ class GameScene: SKScene {
     let actionMove = SKAction.move(to: realDest, duration: 2.0)
     let actionMoveDone = SKAction.removeFromParent()
     projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
+    
   }
 
 }
@@ -188,6 +191,7 @@ extension GameScene: SKPhysicsContactDelegate {
     print("Hit")
     projectile.removeFromParent()
     monster.removeFromParent()
+    
   }
    
 }
