@@ -34,7 +34,9 @@ class GameOverScene: SKScene {
     super.init(size: size)
     
     // 1
-    backgroundColor = SKColor.white
+        let background = SKSpriteNode(imageNamed: "background")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        addChild(background)
     
     // 2
     let message = won ? "You Won!" : "You Lose :["
