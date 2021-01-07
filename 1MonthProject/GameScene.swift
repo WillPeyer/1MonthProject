@@ -78,7 +78,9 @@ class GameScene: SKScene {
     func addBackground() {
         let background = SKSpriteNode(imageNamed: "background")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.zPosition = -69
         addChild(background)
+        
         
     }
 
@@ -94,7 +96,7 @@ class GameScene: SKScene {
 
     // Determine where to spawn the monster along the Y axis
     let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
-    
+    zPosition = 1
     // Position the monster slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
     monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
@@ -116,8 +118,11 @@ class GameScene: SKScene {
       self.view?.presentScene(gameOverScene, transition: reveal)
     }
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
-
+//ray wenderlich is so epic and very swag
   }
+    
+    override func update(_ currentTime: TimeInterval) {
+    }
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     // 1 - Choose one of the touches to work with
     guard let touch = touches.first else {
