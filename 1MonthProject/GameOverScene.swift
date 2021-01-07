@@ -34,8 +34,7 @@ class GameOverScene: SKScene {
     super.init(size: size)
     
     // 1
-      
-    
+  
     // 2
     let message = won ? "You Won!" : "You Lose :["
     
