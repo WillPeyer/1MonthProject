@@ -75,6 +75,12 @@ class GameScene: SKScene {
   func random(min: CGFloat, max: CGFloat) -> CGFloat {
     return random() * (max - min) + min
   }
+    func addBackground() {
+        let background = SKSpriteNode(imageNamed: "background")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        addChild(background)
+        
+    }
 
   func addMonster() {
     
@@ -120,7 +126,9 @@ class GameScene: SKScene {
     run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
 
     let touchLocation = touch.location(in: self)
-    
+    let background = SKSpriteNode(imageNamed: "background")
+    background.position = CGPoint(x: size.width/2, y: size.height/2)
+    addChild(background)
     // 2 - Set up initial location of projectile
     let projectile = SKSpriteNode(imageNamed: "projectile")
     projectile.position = player.position
@@ -157,6 +165,7 @@ class GameScene: SKScene {
   }
 
 }
+
 extension GameScene: SKPhysicsContactDelegate {
   func didBegin(_ contact: SKPhysicsContact) {
     // 1
