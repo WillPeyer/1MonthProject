@@ -34,7 +34,10 @@ class GameOverScene: SKScene {
     super.init(size: size)
     
     // 1
-  
+    let background = SKSpriteNode(imageNamed: "angryCookieMonster")
+    background.position = CGPoint(x: size.width/2, y: size.height/2)
+    addChild(background)
+    background.zPosition = -1
     // 2
     let message = won ? "You Won!" : "You Lose :["
     
