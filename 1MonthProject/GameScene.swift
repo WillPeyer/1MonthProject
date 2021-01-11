@@ -48,9 +48,11 @@ class GameScene: SKScene {
     
   override func didMove(to view: SKView) {
     // 2
+  
     let background = SKSpriteNode(imageNamed: "background")
     background.position = CGPoint(x: size.width/2, y: size.height/2)
     addChild(background)
+    background.zPosition = -1
     // 3
     player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
     // 4
