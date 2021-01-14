@@ -55,6 +55,7 @@ class GameScene: SKScene {
     background.zPosition = -1
     // 3
     player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+    player.zPosition = 1
     // 4
     addChild(player)
     run(SKAction.repeatForever(
@@ -87,7 +88,7 @@ class GameScene: SKScene {
     }
 
   func addMonster() {
-    
+
     // Create sprite
     let monster = SKSpriteNode(imageNamed: "monster")
     monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
@@ -95,6 +96,7 @@ class GameScene: SKScene {
     monster.physicsBody?.categoryBitMask = PhysicsCategory.monster // 3
     monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile // 4
     monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
+    monster.zPosition = 2
 
     // Determine where to spawn the monster along the Y axis
     let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
@@ -145,6 +147,7 @@ class GameScene: SKScene {
     projectile.physicsBody?.contactTestBitMask = PhysicsCategory.monster
     projectile.physicsBody?.collisionBitMask = PhysicsCategory.none
     projectile.physicsBody?.usesPreciseCollisionDetection = true
+    projectile.zPosition = 3
 
     // 3 - Determine offset of location to projectile
     let offset = touchLocation - projectile.position
