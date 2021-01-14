@@ -14,7 +14,7 @@ class MainMenu: SKScene {
     
     // 1
     let background = SKSpriteNode(imageNamed: "elmo")
-    background.position = CGPoint(x: size.width/2, y: size.height/3)
+    background.position = CGPoint(x: size.width/2, y: size.height/2)
     addChild(background)
     background.zPosition = -1
     // 2
@@ -40,7 +40,7 @@ class MainMenu: SKScene {
       SKAction.run() { [weak self] in
         // 5
         guard let `self` = self else { return }
-        let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+        let reveal = SKTransition.flipHorizontal(withDuration: 3)
         let scene = GameScene(size: size)
         self.view?.presentScene(scene, transition:reveal)
       }
