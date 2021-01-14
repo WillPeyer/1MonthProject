@@ -21,7 +21,7 @@ class MainMenu: SKScene {
     
 
    
-    let message = "re you ready to play?"
+    let message = "Are you ready to play?"
     // 3
     let label = SKLabelNode(fontNamed: "Chalkduster")
     label.text = message
