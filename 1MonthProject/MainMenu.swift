@@ -14,20 +14,22 @@ class MainMenu: SKScene {
     
     // 1
     let background = SKSpriteNode(imageNamed: "elmo")
-    background.position = CGPoint(x: size.width/2, y: size.height/2)
+    background.position = CGPoint(x: size.width/2, y: size.height/3)
     addChild(background)
     background.zPosition = -1
     // 2
     
 
    
-    let message = "are you ready to play?"
+    let message = "re you ready to play?"
     // 3
     let label = SKLabelNode(fontNamed: "Chalkduster")
+    label.text = message
     label.fontSize = 40
     label.fontColor = SKColor.white
     label.position = CGPoint(x: size.width/2, y: size.height/2)
     addChild(label)
+    
     
     
         
